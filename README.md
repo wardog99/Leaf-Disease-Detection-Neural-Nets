@@ -1,0 +1,7 @@
+POTATO LEAF DETECTION USING NEURAL NETS
+
+About Dataset:
+
+Potato leaf disease detection in an early stage is challenging because of variations in crop species, crop diseases symptoms and environmental factors. These factors make it difficult to detect potato leaf diseases in the early stage. Various machine learning techniques have been developed to detect potato leaf diseases. However, the existing methods cannot detect crop species and crop diseases in general because these models are trained and tested on images of plant leaves of a specific region. In this research, a multi-level deep learning model for potato leaf disease recognition has developed. At the first level, it extracts the potato leaves from the potato plant image using the YOLOv5 image segmentation technique. At the second level, a novel deep learning technique has been developed using a convolutional neural network to detect the early blight and late blight potato diseases from potato leaf images. The proposed potato leaf disease detection model was trained and tested on a potato leaf disease dataset. The potato leaf disease dataset contains 4062 images collected from the Central Punjab region of Pakistan. The proposed deep learning technique achieved 99.75% accuracy on the potato leaf disease dataset. The performance of the proposed techniques was also evaluated on the PlantVillage dataset. The proposed technique is also compared with the state-of-the-art models and achieved significantly concerning the accuracy and computational cost.
+
+
