@@ -1,7 +1,50 @@
-POTATO LEAF DETECTION USING NEURAL NETS
+# Potato Leaf Disease Detection Using Neural Networks
 
-About Dataset:
+This project explores the detection of potato leaf diseases using image-based deep learning. The goal is to identify healthy potato leaves and distinguish between Early Blight and Late Blight from leaf images.
 
-Potato leaf disease detection in an early stage is challenging because of variations in crop species, crop diseases symptoms and environmental factors. These factors make it difficult to detect potato leaf diseases in the early stage. Various machine learning techniques have been developed to detect potato leaf diseases. However, the existing methods cannot detect crop species and crop diseases in general because these models are trained and tested on images of plant leaves of a specific region. In this research, a multi-level deep learning model for potato leaf disease recognition has developed. At the first level, it extracts the potato leaves from the potato plant image using the YOLOv5 image segmentation technique. At the second level, a novel deep learning technique has been developed using a convolutional neural network to detect the early blight and late blight potato diseases from potato leaf images. The proposed potato leaf disease detection model was trained and tested on a potato leaf disease dataset. The potato leaf disease dataset contains 4062 images collected from the Central Punjab region of Pakistan. The proposed deep learning technique achieved 99.75% accuracy on the potato leaf disease dataset. The performance of the proposed techniques was also evaluated on the PlantVillage dataset. The proposed technique is also compared with the state-of-the-art models and achieved significantly concerning the accuracy and computational cost.
+## Project Overview
 
+Potato leaf disease detection is important for identifying plant health problems early and supporting better crop management. Disease symptoms can vary by crop condition and environmental factors, making visual classification challenging.
 
+The broader research described in the original project context developed a multi-level deep learning approach. It first extracts potato leaves from plant images using YOLOv5-based segmentation, then applies a convolutional neural network to recognize Early Blight and Late Blight from the leaf images.
+
+This repository contains a Jupyter notebook that prepares potato leaf images, trains a convolutional neural network, and evaluates the model's ability to classify three categories:
+
+- Early Blight
+- Late Blight
+- Healthy
+
+## Dataset
+
+The working dataset is organized into Training, Testing, and Validation folders. The notebook combines 4,072 available images before creating a reproducible training and testing split.
+
+The images are:
+
+- Grouped by disease or healthy class.
+- Resized for consistent model input.
+- Split into 80% training data and 20% testing data.
+- Used for training and held-out evaluation.
+
+The original README also references a potato leaf disease dataset of 4,062 images collected from the Central Punjab region of Pakistan, along with evaluation on the PlantVillage dataset.
+
+Early approaches for potato leaf disease detection can be limited when models are trained and tested on images from a specific region or set of growing conditions. The proposed research approach was therefore designed to detect disease from leaf images rather than relying only on the wider plant context.
+
+## Model and Results
+
+A convolutional neural network is used to classify the leaf images. The current implementation achieved:
+
+- Training accuracy: 82.76%
+- Validation accuracy: 78.99% in the final epoch
+- Best validation accuracy: 83.13%
+- Held-out test accuracy: 76.81%
+
+The test results indicate that the model performs particularly well for Late Blight and Early Blight samples. Healthy leaf classification has high precision but lower recall, meaning that some Healthy samples are still being missed or confused with another class.
+
+The referenced research approach reported 99.75% accuracy on the Central Punjab potato leaf disease dataset and was also evaluated on the PlantVillage dataset. It was compared with state-of-the-art models and achieved strong accuracy and computational efficiency.
+
+## Repository Contents
+
+- `pld.ipynb` - Data preparation, model development, training, and evaluation notebook.
+- `Project-Flow.md` - Detailed summary of the notebook workflow and recorded results.
+- `dataset/` - Training, testing, and validation plant leaf images.
+- `research_paper/` - Reference material about plant leaf disease detection and classification.
